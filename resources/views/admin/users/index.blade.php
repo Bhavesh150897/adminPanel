@@ -63,10 +63,7 @@
 $(function () {
 
     var table = $('.data-table').DataTable({
-    	rowReorder: {
-            selector: 'td:nth-child(2)'
-        },
-    	responsive: true,
+    	autoWidth:false,
         processing: true,
         serverSide: true,
         ajax: "{{ route('users.index') }}",
