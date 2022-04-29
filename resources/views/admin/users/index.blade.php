@@ -31,7 +31,7 @@
                 <h3 class="card-title mt-2">User List</h3>
               </div>
               <div class="col-md-6 col-6 text-right">
-                <a href="{{ route('users.create') }}" class="btn btn-info btn-sm"><i class="fa fa-plus pr-1"></i></a>
+                <a href="{{ route('users.create') }}" class="btn btn-info btn-sm"><i class="fa fa-plus"></i></a>
               </div>
             </div>
           </div>
