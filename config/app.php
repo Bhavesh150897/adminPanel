@@ -163,6 +163,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -191,6 +192,16 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'aliases' => [
+            'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
+            'OpenGraph'     => Artesaos\SEOTools\Facades\OpenGraph::class,
+            'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
+            'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
+            'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
+            // or
+            'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+            // ...
+        ],
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
