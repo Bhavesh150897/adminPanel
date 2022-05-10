@@ -26,6 +26,7 @@ use Twitter;
 use SEO;
 use Redirect;
 use Exception;
+use Carbon\Carbon;
 
 class FrontHomeController extends FrontController
 {
@@ -98,9 +99,9 @@ class FrontHomeController extends FrontController
         OpenGraph::addImage(['url' => URL::to($this->frontSettingsData['site-logo'])]);
         SEOMeta::addMeta('twitter:image', URL::to($this->frontSettingsData['site-logo']));
 
-        // view()->share('meta_title','dvsolution.tech | IT | Web | Code Blog Tutorials');
-        // view()->share('meta_description','dvsolution.tech Blog provides you latest Code Tutorials on PHP, Laravel, Codeigniter, JQuery, Node js, React js, Vue js, PHP, and Javascript. Mobile technologies like Android, React Native, Ionic etc.');
-        // view()->share('meta_keyword','dvsolution tech provides you latest Code Tutorials on PHP, Laravel, Codeigniter, JQuery, Node js, React js, Vue js, PHP, and Javascript. Mobile technologies like Android, React Native, Ionic etc.');
+        // view()->share('meta_title','Sonagra.tech | IT | Web | Code Blog Tutorials');
+        // view()->share('meta_description','Sonagra.tech Blog provides you latest Code Tutorials on PHP, Laravel, Codeigniter, JQuery, Node js, React js, Vue js, PHP, and Javascript. Mobile technologies like Android, React Native, Ionic etc.');
+        // view()->share('meta_keyword','Sonagra tech provides you latest Code Tutorials on PHP, Laravel, Codeigniter, JQuery, Node js, React js, Vue js, PHP, and Javascript. Mobile technologies like Android, React Native, Ionic etc.');
         // view()->share('meta_image',asset('upload/blog/v.png'));
 
         //Get Latest Blog
@@ -127,7 +128,7 @@ class FrontHomeController extends FrontController
 
         $Lnew = "Latest Post Of ";
 
-        $pageTitle = $blogsCat->name. " Category" . $page. " - RVSolutionStuff.com";
+        $pageTitle = $blogsCat->name. " Category" . $page. " - sonagra.com";
         $pageDescription = $page2 . "we provides list of ".$Lnew.$blogsCat->meta_description." category tutorials posts, ".$blogsCat->meta_description." popular articles, ".$blogsCat->meta_description." collections of examples, ".$blogsCat->meta_description." category best practices script. we have lists of tutorials and examples about category ".$blogsCat->meta_description;
 
         SEOMeta::setTitle($pageTitle);
@@ -153,9 +154,9 @@ class FrontHomeController extends FrontController
         //Get Blog Category
         // $blogsCat = BlogCategory::where('slug',$slug)->first();
 
-        // view()->share('meta_title',Str::slug($blogsCat->name ?? 'dvsolution').'- DvSolution.com');
-        // view()->share('meta_description',$blogsCat->meta_description ?? 'dvsolution');
-        // view()->share('meta_keyword',$blogsCat->meta_description ?? 'dvsolution');
+        // view()->share('meta_title',Str::slug($blogsCat->name ?? 'Sonagra').'- Sonagra.com');
+        // view()->share('meta_description',$blogsCat->meta_description ?? 'Sonagra');
+        // view()->share('meta_keyword',$blogsCat->meta_description ?? 'Sonagra');
         // view()->share('meta_image',asset('upload/blog/v.png'));
 
         if (is_null($blogsCat)) {
@@ -189,7 +190,7 @@ class FrontHomeController extends FrontController
 
         SEOMeta::addMeta('twitter:card', $blog->meta_description);
         Twitter::setTitle($blog->title.' - '.$this->frontSettingsData['site-title']);
-        Twitter::setSite('@RVSolutionStuff.com');
+        Twitter::setSite('@sonagra.com');
 
         ## Ou
 
@@ -211,7 +212,7 @@ class FrontHomeController extends FrontController
         //Get First Record Blog  
         // $blog = Blog::where('slug',$slug)->where('is_publish', '1')->first();
 
-        // view()->share('meta_title',$blog->title.' - dvsolution.tech');
+        // view()->share('meta_title',$blog->title.' - Sonagra.tech');
         // view()->share('meta_description',$blog->meta_description);
         // view()->share('meta_keyword',$blog->meta_description);
 
@@ -264,7 +265,7 @@ class FrontHomeController extends FrontController
     public function categories()
     {
         $keywords = 'php,laravel,bootstrap,package,composer,jquery,js';
-        $title = 'Categories - RVSolutionStuff.com';
+        $title = 'Categories - sonagra.com';
         $description = 'we are provide examples and demos of php,laravel,bootstrap,js,jquery,javacript,html,css,facebook api,twitter api, jquery plugin etc';
 
         SEOMeta::setTitle($title);
@@ -287,7 +288,7 @@ class FrontHomeController extends FrontController
         OpenGraph::addImage(['url' => URL::to($this->frontSettingsData['site-logo'])]);
         SEOMeta::addMeta('twitter:image', URL::to($this->frontSettingsData['site-logo']));
 
-        // view()->share('meta_title','Blog Category - DvSolution.com');
+        // view()->share('meta_title','Blog Category - Sonagra.com');
         // view()->share('meta_description','Blog Category');
         // view()->share('meta_keyword','Blog Category');
         // view()->share('meta_image',asset('upload/blog/v.png'));
@@ -310,8 +311,8 @@ class FrontHomeController extends FrontController
             $page = ' - Page - '.$request->page;
         }
 
-        $pageTitle = 'Latest Post - RVSolutionStuff.com'.$page;
-        $pageDescription = 'dvsolution privode several latest and new posts of php framework, packages, jquery plugin, bootstrap, elasticsearch, laravel packages etc '. $page;
+        $pageTitle = 'Latest Post - sonagra.com'.$page;
+        $pageDescription = 'Sonagra privode several latest and new posts of php framework, packages, jquery plugin, bootstrap, elasticsearch, laravel packages etc '. $page;
         $pageKeywords = 'latest,post,posts,new,nice,good,blog,examples,codes,demos';
 
         SEOMeta::setTitle($pageTitle);
@@ -334,7 +335,7 @@ class FrontHomeController extends FrontController
         OpenGraph::addImage(['url' => URL::to($this->frontSettingsData['site-logo'])]);
         SEOMeta::addMeta('twitter:image', URL::to($this->frontSettingsData['site-logo']));
 
-        // view()->share('meta_title','Blog Disclaimer - DvSolution.com');
+        // view()->share('meta_title','Blog Disclaimer - Sonagra.com');
         // view()->share('meta_description','Blog');
         // view()->share('meta_keyword','Blog');
         // view()->share('meta_image',asset('upload/blog/v.png'));
@@ -357,7 +358,7 @@ class FrontHomeController extends FrontController
             $page = ' - Page - '.$request->page;
         }
 
-        $pageTitle = 'Disclaimer - RVSolutionStuff.com'.$page;
+        $pageTitle = 'Disclaimer - sonagra.com'.$page;
         $pageDescription = 'Blog privode several latest and new posts of php framework, packages, jquery plugin, bootstrap, elasticsearch, laravel packages etc '. $page;
         $pageKeywords = 'latest,post,posts,new,nice,good,blog,examples,codes,demos';
 
@@ -381,7 +382,7 @@ class FrontHomeController extends FrontController
         OpenGraph::addImage(['url' => URL::to($this->frontSettingsData['site-logo'])]);
         SEOMeta::addMeta('twitter:image', URL::to($this->frontSettingsData['site-logo']));
 
-        // view()->share('meta_title','Blog Disclaimer - DvSolution.com');
+        // view()->share('meta_title','Blog Disclaimer - Sonagra.com');
         // view()->share('meta_description','Blog');
         // view()->share('meta_keyword','Blog');
         // view()->share('meta_image',asset('upload/blog/v.png'));
@@ -401,7 +402,7 @@ class FrontHomeController extends FrontController
             $page = ' - Page - '.$request->page;
         }
 
-        $pageTitle = 'Privacy Policy - RVSolutionStuff.com'.$page;
+        $pageTitle = 'Privacy Policy - sonagra.com'.$page;
         $pageDescription = 'Blog privode several latest and new posts of php framework, packages, jquery plugin, bootstrap, elasticsearch, laravel packages etc '. $page;
         $pageKeywords = 'latest,post,posts,new,nice,good,blog,examples,codes,demos';
 
@@ -425,7 +426,7 @@ class FrontHomeController extends FrontController
         OpenGraph::addImage(['url' => URL::to($this->frontSettingsData['site-logo'])]);
         SEOMeta::addMeta('twitter:image', URL::to($this->frontSettingsData['site-logo']));
 
-        // view()->share('meta_title','Privacy Policy - DvSolution.com');
+        // view()->share('meta_title','Privacy Policy - Sonagra.com');
         // view()->share('meta_description','Blog');
         // view()->share('meta_keyword','Blog');
         // view()->share('meta_image',asset('upload/blog/v.png'));
@@ -445,7 +446,7 @@ class FrontHomeController extends FrontController
             $page = ' - Page - '.$request->page;
         }
 
-        $pageTitle = 'About Us - RVSolutionStuff.com'.$page;
+        $pageTitle = 'About Us - sonagra.com'.$page;
         $pageDescription = 'Blog privode several latest and new posts of php framework, packages, jquery plugin, bootstrap, elasticsearch, laravel packages etc '. $page;
         $pageKeywords = 'latest,post,posts,new,nice,good,blog,examples,codes,demos';
 
@@ -469,7 +470,7 @@ class FrontHomeController extends FrontController
         OpenGraph::addImage(['url' => URL::to($this->frontSettingsData['site-logo'])]);
         SEOMeta::addMeta('twitter:image', URL::to($this->frontSettingsData['site-logo']));
 
-        // view()->share('meta_title','About Us - DvSolution.com');
+        // view()->share('meta_title','About Us - Sonagra.com');
         // view()->share('meta_description','Blog');
         // view()->share('meta_keyword','Blog');
         // view()->share('meta_image',asset('upload/blog/v.png'));
@@ -489,7 +490,7 @@ class FrontHomeController extends FrontController
             $page = ' - Page - '.$request->page;
         }
 
-        $pageTitle = 'Snippet - RVSolutionStuff.com'.$page;
+        $pageTitle = 'Snippet - sonagra.com'.$page;
         $pageDescription = 'we provides good layouts design of snippets like profile, grid, pagination, chat, forms, buttons, model, slider, search, social, badges, controls, footer, select, calender, timeline etc. You can simple take html, css and js code and get layout of available snippets. We provide bootstrap design widget and we also provide without bootstrap snippets '. $page;
         $pageKeywords = 'we provides good layouts design of snippets like profile, grid, pagination, chat, forms, buttons, model, slider, search, social, badges, controls, footer, select, calender, timeline etc. You can simple take html, css and js code and get layout of available snippets. We provide bootstrap design widget and we also provide without bootstrap snippets '. $page;
 
@@ -514,7 +515,7 @@ class FrontHomeController extends FrontController
         SEOMeta::addMeta('twitter:image', URL::to($this->frontSettingsData['site-logo']));
 
 
-        // view()->share('meta_title',$page.'Dvsolution.tech Free code of snippet for HTML, Bootstrap');
+        // view()->share('meta_title',$page.'Sonagra.tech Free code of snippet for HTML, Bootstrap');
         // view()->share('meta_description',$page.'we provides good layouts design of snippets like profile, grid, pagination, chat, forms, buttons, model, slider, search, social, badges, controls, footer, select, calender, timeline etc. You can simple take html, css and js code and get layout of available snippets. We provide bootstrap design widget and we also provide without bootstrap snippets.');
         // view()->share('meta_keyword',$page.'we provides good layouts design of snippets like profile, grid, pagination, chat, forms, buttons, model, slider, search, social, badges, controls, footer, select, calender, timeline etc. You can simple take html, css and js code and get layout of available snippets. We provide bootstrap design widget and we also provide without bootstrap snippets.');
 
@@ -547,7 +548,7 @@ class FrontHomeController extends FrontController
 
         SEOMeta::addMeta('twitter:card', $post->meta_description);
         Twitter::setTitle($post->seo_title.' - '.$this->frontSettingsData['site-title']);
-        Twitter::setSite('@RVSolutionStuff.com');
+        Twitter::setSite('@sonagra.com');
 
         ## Ou
 
@@ -606,7 +607,7 @@ class FrontHomeController extends FrontController
             $page = ' - Page - '.$request->page;
         }
 
-        $pageTitle = 'Contact Us - RVSolutionStuff.com'.$page;
+        $pageTitle = 'Contact Us - sonagra.com'.$page;
         $pageDescription = 'Blog privode several latest and new posts of php framework, packages, jquery plugin, bootstrap, elasticsearch, laravel packages etc '. $page;
         $pageKeywords = 'latest,post,posts,new,nice,good,blog,examples,codes,demos';
 
@@ -630,7 +631,7 @@ class FrontHomeController extends FrontController
         OpenGraph::addImage(['url' => URL::to($this->frontSettingsData['site-logo'])]);
         SEOMeta::addMeta('twitter:image', URL::to($this->frontSettingsData['site-logo']));
 
-        // view()->share('meta_title','Ccontact Us - DvSolution.com');
+        // view()->share('meta_title','Ccontact Us - Sonagra.com');
         // view()->share('meta_description','Blog');
         // view()->share('meta_keyword','Blog');
         // view()->share('meta_image',asset('upload/blog/v.png'));
@@ -676,7 +677,7 @@ class FrontHomeController extends FrontController
         ]); 
         
         Subscriber::create($input);
-        return redirect()->back()->with('success','Dvsolution Subscribe Successfully.');
+        return redirect()->back()->with('success','Sonagra Subscribe Successfully.');
     }
 
     /**
@@ -745,12 +746,12 @@ class FrontHomeController extends FrontController
             return redirect()->route('snippet');
         }
 
-        view()->share('meta_title',$page.ucfirst($tagname->tag).' - RVSolutionStuff.com');
+        view()->share('meta_title',$page.ucfirst($tagname->tag).' - sonagra.com');
         view()->share('meta_description',$page.'we provides good layouts design of '.$tagname->tag.' snippets like profile, grid, pagination, chat, forms, buttons, model, slider, search, social, badges, controls, footer, select, calender, timeline etc. You can simple take html, css and js code and get layout of available snippets of '.$tagname->tag.'. We provide bootstrap design widget and we also provide without bootstrap snippets of '.$tagname->tag.'.');
         view()->share('meta_keyword',$page.'we provides good layouts design of '.$tagname->tag.' snippets like profile, grid, pagination, chat, forms, buttons, model, slider, search, social, badges, controls, footer, select, calender, timeline etc. You can simple take html, css and js code and get layout of available snippets of '.$tagname->tag.'. We provide bootstrap design widget and we also provide without bootstrap snippets of '.$tagname->tag.'.');
 
         if($slug == "bootstrap-4"){
-            view()->share('meta_image','http://rvsolutionstuff.com/image/tag-bootstrap-4.png');
+            view()->share('meta_image','http://sonagra.com/image/tag-bootstrap-4.png');
         }
 
         //Tag Related Post
@@ -769,7 +770,7 @@ class FrontHomeController extends FrontController
      */
     public function taglist()
     {
-        view()->share('meta_title','RVSolutionStuff.com Free code of snippet for html');
+        view()->share('meta_title','sonagra.com Free code of snippet for html');
         view()->share('meta_description','we provides good layouts design of snippets like profile, grid, pagination, chat, forms, buttons, model, slider, search, social, badges, controls, footer, select, calender, timeline etc. You can simple take html, css and js code and get layout of available snippets. We provide bootstrap design widget and we also provide without bootstrap snippets.');
         view()->share('meta_keyword','we provides good layouts design of snippets like profile, grid, pagination, chat, forms, buttons, model, slider, search, social, badges, controls, footer, select, calender, timeline etc. You can simple take html, css and js code and get layout of available snippets. We provide bootstrap design widget and we also provide without bootstrap snippets.'); 
 

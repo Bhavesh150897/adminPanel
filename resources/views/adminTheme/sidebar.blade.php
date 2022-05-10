@@ -42,7 +42,7 @@
                 </p>
               </a>
             </li>
-             <li class="nav-item {{ Request::is('admin/post*') ? 'menu-open' : '' }}">
+             {{-- <li class="nav-item {{ Request::is('admin/post*') ? 'menu-open' : '' }}">
               <a href="{{ route('posts.index') }}"  class="nav-link {{ Request::is('admin/post*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
@@ -57,7 +57,7 @@
                   Update Post
                 </p>
               </a>
-            </li>
+            </li> --}}
             <li class="nav-item {{ Request::is('admin/tag*') ? 'menu-open' : '' }}">
               <a href="{{ route('tags.index') }}"  class="nav-link {{ Request::is('admin/tag*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tag"></i>

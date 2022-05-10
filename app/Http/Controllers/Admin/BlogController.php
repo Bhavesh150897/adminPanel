@@ -160,8 +160,8 @@ class BlogController extends MainController
         $blog->categories()->attach($input['blog_category_id']);
 
         // $details = [
-        //     'title' => 'Mail from dvsolution.tech',
-        //     'body' => 'dvsolution.tech is a added new post '.$blog->title,
+        //     'title' => 'Mail from Sonagra.tech',
+        //     'body' => 'Sonagra.tech is a added new post '.$blog->title,
         // ];
         
         // $subscriber = Subscriber::pluck('email');

@@ -145,7 +145,7 @@
           </tr>
           <tr>
             <th>Image Display Path & Class</th>
-            <td>&lt;img src="https://rvsolutionstuff.com/image/asset/file/blog/your-image-name" class="blog-article"&gt; </td>
+            <td>&lt;img src="https://sonagra.com/image/asset/file/blog/your-image-name" class="blog-article"&gt; </td>
           </tr>
            <tr>
             <th>Phone View</th>

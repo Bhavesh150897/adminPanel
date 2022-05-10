@@ -86,10 +86,8 @@
                       @endif
                     </section>
                 </div>
-                <div class="col-12 col-md-12 col-xl-4 col-sm-12 sidebar-main">
-                    <section class="related-articles mb-5 mt-5">
-                        @include('frontTheme.sidebar')
-                    </section>
+                <div class="col-md-4 sidebar-main">
+                    @include('frontTheme.sidebar')
                 </div>
             </div>
         </div>

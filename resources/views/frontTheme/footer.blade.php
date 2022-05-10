@@ -17,7 +17,7 @@
                     <ul>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ route('landingPage') }}">Home</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ route('blog.aboutus') }}">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('blog.contactus') }}">Contact Us</a></li>
+                        {{-- <li><i class="bx bx-chevron-right"></i> <a href="{{ route('blog.contactus') }}">Contact Us</a></li> --}}
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ route('blog.disclaimer') }}">Disclaimer</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="{{ route('blog.privacypolicy') }}">Privacy policy</a></li>
                     </ul>
@@ -35,8 +35,9 @@
                 <div class="col-lg-4 col-md-6 footer-newsletter">
                     <h4>Join Our Newsletter</h4>
                     <p>www.sonagra.com is a team of developers and designers working towards learning programming and design easy for the world</p>
-                    <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    <form action="{{ route('subscriber.store') }}" method="post">
+                        @csrf
+                        <input type="email" name="email" required><input type="submit" value="Subscribe">
                     </form>
                 </div>
             </div>

@@ -18,6 +18,10 @@
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
              @csrf
           </form>
+          @if(Auth::user()->is_admin == 1)
+              <a class="dropdown-item" href="{{ route('admin.profile') }}"><i class="fas fa-user"></i> Update Profile</a>
+              <a class="dropdown-item" href="{{ route('front.settings') }}"><i class="fas fa-cog"></i> Front Settings</a>
+            @endif
           <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link dropdown-item text-center"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
       </li>

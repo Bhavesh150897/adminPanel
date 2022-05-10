@@ -1,0 +1,28 @@
+.search-box h3{
+    color: white !important;
+    padding-top: 13px !important;
+    text-align: center;
+}
+.search-box{
+    /*border-top-left-radius: 20px !important;*/
+    /*border-top-right-radius: 20px !important;*/
+}
+.sidebar-tag{
+    padding: 20px !important;
+}
+.recent-posts{
+    padding: 10px !important;
+}
+.search-box h4{
+    color: white !important;
+    padding-top: 9px !important;
+    text-align: center;
+}
+.recommending-you {
+    background-color: #fbfbfb !important;
+    border-radius: 20px !important;
+    -webkit-box-shadow: 0 19px 20px rgba(0, 0, 0, .1) !important;
+    box-shadow: 0 19px 20px rgba(0, 0, 0, .1) !important;
+    overflow: hidden;
+    margin: 0px !important;
+}

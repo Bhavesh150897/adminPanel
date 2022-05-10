@@ -44,6 +44,10 @@ Route::get('about-us', [FrontHomeController::class, 'aboutus'])->name('blog.abou
 Route::get('contact-us', [FrontHomeController::class, 'contactus'])->name('blog.contactus');
 Route::post('contact-us/store', [FrontHomeController::class, 'contactusStore'])->name('blog.contactus.store');
 Route::get('latestpost', [FrontHomeController::class, 'latestPost'])->name('latest.post');
+Route::post('subscribe/store', [FrontHomeController::class, 'subscriberStore'])->name('subscriber.store');
+
+Route::get('snippet', [FrontHomeController::class, 'snipestPostIndex'])->name('snippet');
+Route::get('snippet/{slug}', [FrontHomeController::class, 'snipestPostDetail'])->name('post.detail');
 
 Auth::routes();
 
