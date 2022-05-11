@@ -33,12 +33,12 @@
             </div>
         </div>
     </div>
-    {{-- <div class="sidebar-item recent-posts">
+    <div class="sidebar-item recent-posts">
         @foreach($popularPosts as $key => $value)
             <li><i class="fas fa-chevron-right"></i> <a href="{{ route('blog.detail', $value->slug ) }}">{{ $value->title }}</a></li>
         @endforeach
 
-    </div> --}}
+    </div>
 </div>
 
 <div class="sidebar">

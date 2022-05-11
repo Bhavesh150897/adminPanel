@@ -61,8 +61,8 @@ class FrontHomeController extends FrontController
         view()->share('blogfeatured',$blogfeatured);
 
         // popularPosts
-        // $popularPosts = Blog::where("total_view",">",150)->orderBy(\DB::raw('RAND()'))->take(10)->get();
-        // view()->share('popularPosts',$popularPosts);
+        $popularPosts = Blog::where("total_view",">",150)->orderBy(\DB::raw('RAND()'))->take(10)->get();
+        view()->share('popularPosts',$popularPosts);
 
         //front setting
         $frontSettings = \Cache::remember('frontSettings', 1000, function (){
