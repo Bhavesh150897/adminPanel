@@ -10,3 +10,4 @@
   <link href="{{ asset('frontTheme/assets/css/style.css') }}" rel="stylesheet">
   <link href="{{ asset('dvNew/style/home.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('adminTheme/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('dvNew/style/monokai-sublime.min.css') }}" />

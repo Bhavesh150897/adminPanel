@@ -2,65 +2,10 @@
 
 @section('style')
 <link href="{{ asset('dvNew/style/article_detail.css') }}" rel="stylesheet">
-{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/monokai-sublime.min.css" /> --}}
-{{-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script> --}}
-{{-- <script>hljs.initHighlightingOnLoad();</script> --}}
- <script src='https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/src/highlightjs-line-numbers.min.js'/>
-  <script src='https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/lib/index.min.js'/>
-  <script src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js'/>
-  <script defer='defer' src='https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?autoload=true&amp;skin=desert'/>
-  <link rel="stylesheet" href="{{ asset('dvNew/style/enlighterjs.min.css') }}">
-  
-
-  <script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumberOnLoad();
-  </script>  
 <link href="{{ asset('dvNew/style/home.css') }}" rel="stylesheet">
-  <style type="text/css">
-    /*pre {
-        font-size: 1.125em;
-        background-color: #eeeeee;
-        padding: 0.750em;
-        border-radius: 5px;
-    }*/
-    /*code {
-        color: #000000;
-    }*/
-   /* .blog-article{
-      width: 100%;
-    }*/
-    /*.post-description p strong.step{
-      margin-bottom: 13px;
-    }*/
-    /*.step::before { content: ' '; display: block; }*/
-    pre{
-        display: block !important;
-        padding: 9.5px !important;
-        margin: 0 0 10px !important;
-        font-size: 13px !important;
-        line-height: 1.42857143 !important;
-        color: #333 !important;
-        word-break: break-all !important;
-        word-wrap: break-word !important;
-        background-color: #f5f5f5 !important;
-        box-shadow: 0px 0px 3px !important;
-        border-radius: 4px !important;
-        overflow: auto !important;
-        }
-      .step{
-        border-left: 5px solid #1ECF3B !important;
-        border-top: 1px solid #ececec !important;
-        border-bottom: 1px solid #ececec !important;
-        display: inline-block !important;
-        margin-top: 20px !important;
-        padding: 12px 7px !important;
-        width: 100% !important;
-        color: #333344 !important;
-        background: #DEEDED !important;
-      }
-  </style>
-  <link rel="stylesheet" href="{{ asset('dvNew/style/enlighterjs.min.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/monokai.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/php.min.js"></script>
 @endsection
 @section('content')
         <section id="page_body" class="container-fluid mt-5 pt-4">
@@ -159,11 +104,6 @@
         </section>
 @endsection
 @section('script')
-<script src="{{ asset('dvNew/js/enlighterjs.min.js') }}" type="text/javascript"></script>
 <script type="text/javascript">
-    EnlighterJS.init('pre', {
-            theme: 'enlighter',
-            indent : 2
-    });
 </script>
  @endsection

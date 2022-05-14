@@ -12,7 +12,6 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        'https://sonagra.herokuapp.com',
-        'https://sonagra.herokuapp.com/login',
+        //
     ];
 }

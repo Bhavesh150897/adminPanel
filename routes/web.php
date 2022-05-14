@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\Admin\BackupController;
 use App\Http\Controllers\Front\FrontHomeController;
+use App\Http\Controllers\StorageFileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,7 @@ Route::post('subscribe/store', [FrontHomeController::class, 'subscriberStore'])-
 
 Route::get('snippet', [FrontHomeController::class, 'snipestPostIndex'])->name('snippet');
 Route::get('snippet/{slug}', [FrontHomeController::class, 'snipestPostDetail'])->name('post.detail');
+Route::get('image/asset/file/{folder}/{file}', [StorageFileController::class, 'getImageAssetStorgeFile'])->name('image.asset.storage.file');
 
 Auth::routes();
 
