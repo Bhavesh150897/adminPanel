@@ -12,7 +12,6 @@ use App\Http\Controllers\Admin\TutorialController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ImageController;
 use App\Http\Controllers\Admin\PostController;
-use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\Admin\FrontSettingsController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\SubscriberController;
@@ -64,15 +63,6 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
     //CategoryController
     Route::resource('categorys', CategoryController::class);
     
-    //TagController
-    Route::resource('tags', TagController::class);
-    
-    //LanguageController
-    Route::resource('languages', LanguageController::class);
-    
-    //LanguageController
-    Route::resource('tutorials', TutorialController::class);
-
     // ContactController
     Route::resource('contactus',ContactController::class);
     Route::get('contactus/replay/{id}', [ContactController::class, 'contactusReplay'])->name('contactus.replay');
@@ -88,17 +78,6 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
     // ImageController
     Route::get('image/create', [ImageController::class, 'create'])->name('image.create');
     Route::post('image/store', [ImageController::class, 'Store'])->name('image.store');
-
-    //PostController
-    Route::resource('posts', PostController::class);
-    Route::get('post/tag/{id}', [PostController::class, 'createTag'])->name('post.tag.create');
-    Route::post('post/tag/store', [PostController::class, 'addTag'])->name('post.tag.store');
-    Route::get('post/clear/cache/{slug}', [PostController::class, 'postClearCache'])->name('post.clear.cache');
-
-    // TagController
-    Route::get('update-post', [TagsController::class, 'index'])->name('update.post');
-    Route::post('tags/store', [TagsController::class, 'store'])->name('tag.store');
-    Route::post('getAjaxPost', [TagsController::class, 'getAjaxPost'])->name('getajax.post.data');
 
     // admin update
     Route::get('user-profile', [ProfileController::class, 'profile'])->name('admin.profile');
@@ -118,5 +97,13 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function () {
     //FrontSettingsController
     Route::get('settings', [FrontSettingsController::class, 'index'])->name('front.settings');
     Route::post('settingsUpdate', [FrontSettingsController::class, 'update'])->name('front.settings.update');
-    
+});
+
+Route::get('sitemap', [FrontHomeController::class, 'siteMap'])->name('sitemap');
+
+Route::get('rss', function(){
+    $posts = App\Models\Blog::orderBy('Blogs.id', 'desc')->get();
+    $frontsetting = App\Models\FrontSetting::pluck('value','slug');
+    $content = view("dvsolutionFront.rssFeed",compact('posts','frontsetting'));
+    return Response::make($content, '200')->header('Content-Type', 'text/xml');
 });

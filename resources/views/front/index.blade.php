@@ -46,7 +46,7 @@
 .card-body p {
   font-size: 14px;
   margin: 0 0 20px 0;
-  font-weight: 500;
+  /*font-weight: 500;*/
   color: rgb(70, 68, 68);
 }
 .user {
@@ -75,11 +75,50 @@
 .text-right{
     text-align: right;
 }
+@media only screen and (max-width: 600px) {
+    .container-fluid{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .recent-posts{
+        margin-left: -15px !important;
+    }
+}
 </style>
 @endsection
 
 @section('content')
-<div class="container-fluid" data-aos="fade-up">
+<div class="container-fluid" style="padding-left:0px !important;padding-right: 0px !important;">
+    <div class="row">
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <div class="about-us-web">
+                            <h2 class="text-dark">SONA<span class="text-light">GRA</span></h2>
+                            <p class="text-light">Sonagra specifically for sharing programming issue and examples. We’ll be sharing some chunks of codes of PHP, Laravel Framework, CSS3, HTML5, MYSQL, Bootstrap, CodeIgniter Framework, JQuery, Javascript, Server, Ionic Framework etc. In our site i am sure you will find something good solution and find example of topics of PHP, Laravel etc.</p>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="{{ route('latest.post') }}" class="custom-btn"> Our Articles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <img src="{{ asset('frontTheme/assets/img/blog/hero-img.png') }}" alt="" />
+                    </div>
+                </div>
+                
+            </div>
+            {{-- <div class="justify-content-between align-items-center"> --}}
+              {{-- <h2 class="text-dark">SONA<span class="text-light">GRA</span></h2> --}}
+              {{-- <p class="text-light">Sonagra specifically for sharing programming issue and examples. We’ll be sharing some chunks of codes of PHP, Laravel Framework, CSS3, HTML5, MYSQL, Bootstrap, CodeIgniter Framework, JQuery, Javascript, Server, Ionic Framework etc. In our site i am sure you will find something good solution and find example of topics of PHP, Laravel etc.</p> --}}
+            {{-- </div> --}}
+
+        </section>
+    </div>
+</div>
+<div class="container-fluid mv-container">
     <div class="row">
         <div class="col-lg-8">
             <div class="row">

@@ -22,7 +22,8 @@
     background-color: #2AE149;
     padding: 10px 15px;
     border-radius: 10px;
-    width: auto
+    width: auto;
+    width:790px !important;
 }
 
 .article-details-main .post-info span {
@@ -380,4 +381,9 @@
 
 .reply-comment-hide {
     display: none
+}
+@media only screen and (max-width: 600px) {
+    .article-details-main .post-info{
+        width: 308px !important;
+    }
 }

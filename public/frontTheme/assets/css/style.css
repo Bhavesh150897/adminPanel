@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #4d4643;
 }
 
@@ -64,6 +64,12 @@ h1, h2, h3, h4, h5, h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+}
+
+@media only screen and (max-width: 600px) {
+    .blog .sidebar{
+        margin: 0 0 60px 3px !important;
+    }
 }
 /*--------------------------------------------------------------
 # Header
@@ -498,7 +504,8 @@ section {
   padding: 15px 0;
   background: #1bbd36;
   min-height: 40px;
-  margin-top: 72px;
+  margin-top: 31px;
+  margin-bottom: 40px;
 }
 .breadcrumbs h2 {
   font-size: 26px;

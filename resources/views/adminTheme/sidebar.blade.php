@@ -42,46 +42,6 @@
                 </p>
               </a>
             </li>
-             {{-- <li class="nav-item {{ Request::is('admin/post*') ? 'menu-open' : '' }}">
-              <a href="{{ route('posts.index') }}"  class="nav-link {{ Request::is('admin/post*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-th"></i>
-                <p>
-                  Post
-                </p>
-              </a>
-            </li>
-            <li class="nav-item {{ Request::is('admin/update-post*') ? 'menu-open' : '' }}">
-              <a href="{{ route('update.post') }}"  class="nav-link {{ Request::is('admin/update-post*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-th"></i>
-                <p>
-                  Update Post
-                </p>
-              </a>
-            </li> --}}
-            <li class="nav-item {{ Request::is('admin/tag*') ? 'menu-open' : '' }}">
-              <a href="{{ route('tags.index') }}"  class="nav-link {{ Request::is('admin/tag*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-tag"></i>
-                <p>
-                  Tag
-                </p>
-              </a>
-            </li>
-            <li class="nav-item {{ Request::is('admin/languages*') ? 'menu-open' : '' }}">
-              <a href="{{ route('languages.index') }}"  class="nav-link {{ Request::is('admin/languages*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-language"></i>
-                <p>
-                  Languages
-                </p>
-              </a>
-            </li>
-            <li class="nav-item {{ Request::is('admin/tutorial*') ? 'menu-open' : '' }}">
-              <a href="{{ route('tutorials.index') }}"  class="nav-link {{ Request::is('admin/tutorial*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-book"></i>
-                <p>
-                  Tutorial
-                </p>
-              </a>
-            </li>
             <li class="nav-item {{ Request::is('admin/blogs*') ? 'menu-open' : '' }}">
               <a href="{{ route('blogs.index') }}"  class="nav-link {{ Request::is('admin/blogs*') ? 'active' : '' }}">
                 <i class="nav-icon fa fa-edit"></i>

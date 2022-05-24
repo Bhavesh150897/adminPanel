@@ -7,7 +7,7 @@
 
 @section('content')
 
-        <div class="container-fluid" data-aos="fade-up">
+        <div class="container-fluid mt-5">
             <div class="row mx-0">
                 <div class="col-12 col-md-12 col-xl-8 col-sm-12">
                     <section class="article-listing">

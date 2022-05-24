@@ -6,12 +6,42 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/themes/monokai.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/php.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.min.js" integrity="sha512-2W7f/2AT/pqNI+4hrfTDsAz67Jb267F+SjVQ38iODHDScHBpQ//aZrVMtiblC6KrP2YpwI33934NVOaV+QUI0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.min.js" integrity="sha512-ww5ELwb6FZgeD4RMpA3P4N0Ka/ZVn1oB/4Rj4rPK/FVBI4P2mU/v/dP6r4m5a++kH8cHRkmP6w9rLNwfa8CAUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/css.min.js" integrity="sha512-u4vLZHRu4nh+1kNW5YkHxYyyg8PCjDaOcx+1LwKTSSfKpr2jtQjDtF9jsWgYZLkV7ak5hZ7CO5X0Bqj0BBg2tQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style type="text/css">
+    .step{
+        border-left: 5px solid #333333;
+        /*border-top: 1px solid #2AE149;*/
+        /*border-bottom: 1px solid #2AE149;*/
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 12px 7px;
+        width: 100%;
+        color: #333344 !important;
+        background: #DEEDED;
+      }
+      pre {
+        font-size: 15px;
+        background-color: #333333;
+        padding: 0.750em;
+        border-radius: 5px;
+    }
+    .blog-article{
+      width: 100%;
+    }
+    /*.post-description p strong.step{
+      margin-bottom: 13px;
+    }*/
+    /*.step::before { content: ' '; display: block; }*/
+</style>
 @endsection
 @section('content')
         <section id="page_body" class="container-fluid mt-5 pt-4">
             <div class="row mx-0">
                 <div class="col-12 col-md-12 col-xl-8 col-sm-12">
-                    <section class="article-details-main mb-5 mt-5">
+                    <section class="article-details-main mb-5 mt-5" style="padding:0px">
                         <div class="row mx-0">
                             <div class="col-md-12">
                                 <h1 class="mb-3" style="font-size: 40px;">
@@ -25,7 +55,7 @@
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="post-info mb-3" style="width:751px !important">
+                                    <div class="post-info mb-3">
                                         <span class="time">
                                             <i class="fas fa-calendar-alt"></i> {{ $blog->created_at->format('M d, Y') }}</span>
                                         <span class="eye">
@@ -40,7 +70,8 @@
                                 </div>
                             </div>
                             
-                            <img class="post-image blog-article" src="{{ asset('frontTheme/assets/img/blog/blog-1.jpg') }}" alt="{{ $blog->image }}" />
+                            {{-- {{dd()}} --}}
+                            <img class="post-image blog-article" src="{!! !empty($blog->image) ? route('image.asset.storage.file',['folder' => 'blog', 'file' => $blog->image]) : '' !!}" alt="{{ $blog->image }}" />
                             
                             {{-- <section>
                                 {!! $frontSettings['ads-1'] !!}

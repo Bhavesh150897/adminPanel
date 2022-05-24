@@ -19,6 +19,33 @@
     var current_page_url = "<?php echo URL::full(); ?>";
     var rn = "<?php echo Route::currentRouteName(); ?>";
     </script>
+    <style type="text/css">
+        .custom-btn{
+            background: #F8F9F4;
+            border-radius: 999px;
+            box-shadow: #F8F9F4 0 10px 20px -10px;
+            box-sizing: border-box;
+            color: #1BBD36;
+            cursor: pointer;
+            font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            opacity: 1;
+            outline: 0 solid transparent;
+            padding: 8px 18px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: fit-content;
+            word-break: break-word;
+            border: 0;
+        }
+        .about-us-web{
+            position: relative;
+            top: 80px;
+        }
+    </style>
   @include('frontTheme.style')
   @yield('style')
 </head>
@@ -27,16 +54,7 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <main id="main">
-        <section id="breadcrumbs" class="breadcrumbs">
-          <div class="container">
-
-            <div class="justify-content-between align-items-center">
-              <h2 class="text-dark">SONA<span class="text-light">GRA</span></h2>
-              <p class="text-light">Sonagra specifically for sharing programming issue and examples. We’ll be sharing some chunks of codes of PHP, Laravel Framework, CSS3, HTML5, MYSQL, Bootstrap, CodeIgniter Framework, JQuery, Javascript, Server, Ionic Framework etc. In our site i am sure you will find something good solution and find example of topics of PHP, Laravel etc.</p>
-            </div>
-
-          </div>
-        </section>
+        
         <!-- End Breadcrumbs -->
 
         <!-- ======= Blog Section ======= -->

@@ -242,4 +242,16 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .article-listing .title{
+        text-align: center;
+    }
+    .article-listing .hr-post-box .content-box .read-more-btn{
+        margin-bottom: 31px !important;
+    }
+    .article-details-main .post-info{
+        width: 308px !important;
+    }
+}
+
 /*# sourceMappingURL=article_listing.css.map */
