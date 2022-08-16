@@ -44,13 +44,13 @@ class FrontHomeController extends FrontController
         $latestCategory = BlogCategory::get();
         view()->share('latestCategory',$latestCategory);
 
-        //Get Random Post Siderbar
-        $randomPostSidebar = Blog::where('is_publish', '1')->inRandomOrder()->take(15)->get();
-        view()->share('randomPostSidebar',$randomPostSidebar);
+        // //Get Random Post Siderbar
+        // $randomPostSidebar = Blog::where('is_publish', '1')->inRandomOrder()->take(15)->get();
+        // view()->share('randomPostSidebar',$randomPostSidebar);
 
-        //Get Random Post Footer
-        $randomPostFooter = Blog::where('is_publish', '1')->inRandomOrder()->take(9)->get();
-        view()->share('randomPostFooter',$randomPostFooter);
+        // //Get Random Post Footer
+        // $randomPostFooter = Blog::where('is_publish', '1')->inRandomOrder()->take(9)->get();
+        // view()->share('randomPostFooter',$randomPostFooter);
 
         //Get Latest Blog Limit
         $latestBlogLimit = Blog::where('is_publish', '1')->latest()->take(10)->get();
